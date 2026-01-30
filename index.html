@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Yenz Store - Redeem VSPhone</title>
+  <title>Yenz Store - VIP VSPhone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -15,55 +15,55 @@
 
     header {
       text-align: center;
-      padding: 40px 20px;
+      padding: 45px 20px;
       background: radial-gradient(circle at top, #1e3a8a, #020617 70%);
-      box-shadow: 0 0 40px rgba(59,130,246,0.4);
+      box-shadow: 0 0 45px rgba(59,130,246,0.45);
     }
 
     header h1 {
       margin: 0;
-      font-size: 34px;
+      font-size: 36px;
       color: #60a5fa;
-      text-shadow: 0 0 15px rgba(96,165,250,0.8);
+      text-shadow: 0 0 18px rgba(96,165,250,0.9);
     }
 
     header p {
-      margin-top: 8px;
+      margin-top: 10px;
       color: #93c5fd;
       opacity: 0.9;
+      font-size: 15px;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
-      padding: 30px 20px;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
     }
 
     .card {
       background: linear-gradient(180deg, #020617, #020617);
-      border-radius: 16px;
-      padding: 22px;
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      max-width: 420px;
       position: relative;
       box-shadow:
-        0 0 0 1px rgba(59,130,246,0.2),
-        0 15px 40px rgba(0,0,0,0.8);
-      transition: 0.25s ease;
+        0 0 0 1px rgba(59,130,246,0.25),
+        0 20px 50px rgba(0,0,0,0.85);
+      transition: 0.3s ease;
+      text-align: center;
     }
 
     .card::before {
       content: "";
       position: absolute;
       inset: 0;
-      border-radius: 16px;
-      box-shadow: 0 0 25px rgba(59,130,246,0.35);
+      border-radius: 20px;
+      box-shadow: 0 0 35px rgba(59,130,246,0.4);
       opacity: 0;
-      transition: 0.25s;
+      transition: 0.3s;
     }
 
     .card:hover::before {
@@ -71,44 +71,64 @@
     }
 
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
     }
 
-    .card h3 {
-      margin-top: 0;
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #020617;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 18px;
+      box-shadow: 0 0 20px rgba(34,211,238,0.9);
+    }
+
+    .card h2 {
+      margin: 10px 0;
       color: #60a5fa;
-      text-shadow: 0 0 8px rgba(96,165,250,0.6);
+      text-shadow: 0 0 10px rgba(96,165,250,0.7);
     }
 
-    .card p {
-      color: #cbd5f5;
+    .features {
+      text-align: left;
+      margin: 20px 0;
+      color: #c7d2fe;
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.7;
+    }
+
+    .features li {
+      margin-bottom: 8px;
     }
 
     .price {
-      margin: 14px 0;
-      font-size: 22px;
+      font-size: 28px;
       font-weight: bold;
       color: #22d3ee;
-      text-shadow: 0 0 10px rgba(34,211,238,0.8);
+      text-shadow: 0 0 14px rgba(34,211,238,0.9);
+      margin: 20px 0;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 20px;
-      border-radius: 12px;
+      width: 100%;
+      padding: 14px;
+      border-radius: 14px;
       background: linear-gradient(135deg, #2563eb, #22d3ee);
       color: #020617;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 0 20px rgba(59,130,246,0.8);
-      transition: 0.25s;
+      font-size: 16px;
+      box-shadow: 0 0 30px rgba(59,130,246,0.9);
+      transition: 0.3s;
     }
 
     .btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 35px rgba(34,211,238,1);
+      box-shadow: 0 0 45px rgba(34,211,238,1);
     }
 
     footer {
@@ -124,44 +144,31 @@
 
   <header>
     <h1>Yenz Store</h1>
-    <p>Redeem Code VSPhone • Fast • Trusted</p>
+    <p>Redeem Code VSPhone • VIP Access</p>
   </header>
 
   <div class="container">
-    <div class="products">
+    <div class="card">
+      <div class="badge">BEST DEAL</div>
+      <h2>VIP VSPhone 1 Hari</h2>
 
-      <div class="card">
-        <h3>Redeem VSPhone 1 Hari</h3>
-        <p>Aktif cepat, legal, dan aman untuk semua device.</p>
-        <div class="price">Rp 3.000</div>
-        <a class="btn" href="https://wa.me/6283122558992?text=Halo%20saya%20mau%20order%20Redeem%20VSPhone%201%20Hari" target="_blank">
-          Order via WhatsApp
-        </a>
-      </div>
+      <ul class="features">
+        <li>✔ Aktivasi cepat</li>
+        <li>✔ Aman & terpercaya</li>
+        <li>✔ Support semua device</li>
+        <li>✔ No ribet, langsung pakai</li>
+      </ul>
 
-      <div class="card">
-        <h3>Redeem VSPhone 7 Hari</h3>
-        <p>Paket hemat, cocok untuk pemakaian mingguan.</p>
-        <div class="price">Rp 15.000</div>
-        <a class="btn" href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20mau%20order%20Redeem%20VSPhone%207%20Hari" target="_blank">
-          Order via WhatsApp
-        </a>
-      </div>
+      <div class="price">Rp 3.000</div>
 
-      <div class="card">
-        <h3>Redeem VSPhone 30 Hari</h3>
-        <p>Paket best seller, bebas ribet.</p>
-        <div class="price">Rp 50.000</div>
-        <a class="btn" href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20mau%20order%20Redeem%20VSPhone%2030%20Hari" target="_blank">
-          Order via WhatsApp
-        </a>
-      </div>
-
+      <a class="btn" href="https://wa.me/6283122558992?text=Halo%20saya%20mau%20order%20VIP%20VSPhone%201%20Hari" target="_blank">
+        Order via WhatsApp
+      </a>
     </div>
   </div>
 
   <footer>
-    © 2026 Yenz Store • Secure & Premium
+    © 2026 Yenz Store • Trusted & Secure
   </footer>
 
 </body>
